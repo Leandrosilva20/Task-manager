@@ -1,0 +1,20 @@
+{
+  "name": "sistema-gerenciamento-tarefas",
+  "version": "1.0.0",
+  "description": "Sistema simples de gerenciamento de tarefas com Node.js e Express (armazenamento em memória)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "npx nodemon app.js"
+  },
+  "author": "Seu Nome",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
