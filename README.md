@@ -59,7 +59,7 @@ npm start
 
 O servidor iniciará em:
 
-(http://localhost:3000/tasks)
+([http://localhost:3000/tasks](http://localhost:3000/tasks))
 
 Rotas Disponíveis
 1. Listar todas as tarefas
