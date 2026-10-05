@@ -42,16 +42,4 @@ Task-manager/
 ├── server.js
 ├── package.json
 └── README.md
-```
 
-> Os dados são armazenados em memória e reiniciam ao desligar o servidor.
-```
-
----
-
-### Como fazer:
-1. Apaga tudo que tem no `README.md` agora
-2. Cola o código acima no lugar
-3. Clica em **Commit changes** ✅
-
-Pronto! Ficará bonito e organizado! 😄 Deu certo? ✅
