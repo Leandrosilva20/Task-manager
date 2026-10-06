@@ -1,29 +1,29 @@
-# 📋 Task Manager — API de Gerenciamento de Tarefas
+#  Task Manager — API de Gerenciamento de Tarefas
 
 API REST para gerenciamento de tarefas, desenvolvida com **Node.js**, **Express**, **MongoDB** e **Mongoose**, com persistência real de dados.
 
 ---
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 - Criar, listar, atualizar e remover tarefas
 - Filtro por status
 - Paginação nas listagens
 - Dados persistidos no MongoDB (não são perdidos ao reiniciar o servidor)
 
-## 🛠️ Tecnologias
+##  Tecnologias
 
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
 - [Mongoose](https://mongoosejs.com/)
 
-## 📦 Pré-requisitos
+##  Pré-requisitos
 
 - [Node.js](https://nodejs.org/) instalado
 - [MongoDB](https://www.mongodb.com/try/download/community) instalado e em execução na máquina
 
-## 🚀 Instalação e execução
+##  Instalação e execução
 
 ```bash
 # Clone o repositório
@@ -41,7 +41,7 @@ npm start
 
 A API estará disponível em: **http://localhost:3000/tasks**
 
-## 📡 Rotas da API
+##  Rotas da API
 
 | Método | Rota         | Descrição        | Como usar                                        |
 |--------|--------------|------------------|--------------------------------------------------|
@@ -88,7 +88,7 @@ curl -X PUT http://localhost:3000/tasks/ID_DA_TAREFA \
 curl -X DELETE http://localhost:3000/tasks/ID_DA_TAREFA
 ```
 
-## 📁 Estrutura do projeto
+##  Estrutura do projeto
 
 ```
 Task-manager/
@@ -105,7 +105,7 @@ Task-manager/
 └── README.md
 ```
 
-## 🤝 Contribuindo
+##  Contribuindo
 
 1. Faça um fork do projeto
 2. Crie uma branch: `git checkout -b minha-feature`
@@ -113,6 +113,6 @@ Task-manager/
 4. Envie para o repositório: `git push origin minha-feature`
 5. Abra um Pull Request
 
-## 👤 Autor
+##  Autor
 
 Desenvolvido por [Leandrosilva20](https://github.com/Leandrosilva20).
