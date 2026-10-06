@@ -1,1 +1,13 @@
-
+{
+  "name": "tarefas-mongodb",
+  "version": "2.0.0",
+  "description": "Trabalho 2 — Sistema de Tarefas com MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.7.0"
+  }
+}
