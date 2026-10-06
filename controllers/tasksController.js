@@ -1,38 +1,35 @@
-let tasks = [];
-let nextId = 1;
-
-const delay = () => new Promise(res => setTimeout(res, 50));
+const Task = require("../models/Task");
 
 exports.getAllTasks = async (req, res) => {
-  await delay();
-  res.json(tasks);
+  const { status, page = 1, limit = 10 } = req.query;
+  const filtro = status ? { status } : {};
+  const pular = (page - 1) * limit;
+
+  const tarefas = await Task.find(filtro).skip(pular).limit(limit);
+  const total = await Task.countDocuments(filtro);
+
+  res.json({ total, página: page, dados: tarefas });
 };
 
 exports.createTask = async (req, res) => {
-  await delay();
-  const { título, status = "pendente" } = req.body;
-  if (!título) return res.status(400).json({ erro: "'título' é obrigatório" });
-  
-  const nova = { id: nextId++, título: título.trim(), status };
-  tasks.push(nova);
-  res.status(201).json(nova);
+  try {
+    const tarefa = await Task.create(req.body);
+    res.status(201).json(tarefa);
+  } catch (err) {
+    res.status(400).json({ erro: err.message });
+  }
 };
 
 exports.updateTask = async (req, res) => {
-  await delay();
-  const tarefa = tasks.find(t => t.id === parseInt(req.params.id));
-  if (!tarefa) return res.status(404).json({ erro: "Tarefa não encontrada" });
-  
-  if (req.body.título) tarefa.título = req.body.título.trim();
-  if (req.body.status) tarefa.status = req.body.status;
+  const tarefa = await Task.findByIdAndUpdate(req.params.id, req.body, {
+    new: true, runValidators: true
+  });
+  if (!tarefa) return res.status(404).json({ erro: "Não encontrada" });
   res.json(tarefa);
 };
 
 exports.deleteTask = async (req, res) => {
-  await delay();
-  const idx = tasks.findIndex(t => t.id === parseInt(req.params.id));
-  if (idx === -1) return res.status(404).json({ erro: "Tarefa não encontrada" });
-  
-  tasks.splice(idx, 1);
-  res.json({ mensagem: "Removida com sucesso" });
+  const tarefa = await Task.findByIdAndDelete(req.params.id);
+  if (!tarefa) return res.status(404).json({ erro: "Não encontrada" });
+  res.json({ mensagem: "Removida!" });
 };
