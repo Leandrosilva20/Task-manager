@@ -1,40 +1,36 @@
+# Sistema de Gerenciamento de Tarefas — MongoDB
 
-```markdown
-# Sistema de Gerenciamento de Tarefas
+Projeto desenvolvido com **Node.js**, **Express**, **MongoDB** e **Mongoose** — com persistência real de dados.
 
-Projeto desenvolvido com **Node.js** e **Express** — sistema simplificado de gerenciamento de tarefas com armazenamento em memória.
+---
 
-## Tecnologias
-- Node.js
-- Express
-- Programação assíncrona (async/await)
+## Pré-requisitos
+- Ter o **MongoDB** instalado e rodando na máquina
+- Ter o **Node.js** instalado
 
 ## Instalação e Execução
 
 ```bash
 npm install
 npm start
-```
 
-Servidor em execução em: **http://localhost:3000**
+Acesse: http://localhost:3000/tasks
 
-## Rotas da API
+Rotas da API
+Tabela
+Método	Rota	Descrição	Como usar
+GET	/tasks	Listar todas	?status=pendente&page=1&limit=5
+POST	/tasks	Criar nova	{"título": "Nome", "descrição": "Detalhe"}
+PUT	/tasks/:id	Atualizar tarefa	Envie os campos que quer alterar
+DELETE	/tasks/:id	Remover tarefa	—
 
-| Método | Rota | Descrição | Corpo da Requisição |
-|---|---|---|---|
-| GET | `/tasks` | Listar todas as tarefas | — |
-| POST | `/tasks` | Criar nova tarefa | `{ "título": "Nome", "status": "pendente" }` |
-| PUT | `/tasks/:id` | Atualizar tarefa | `{ "título": "Novo", "status": "concluída" }` |
-| DELETE | `/tasks/:id` | Remover tarefa | — |
-
-### Detalhes:
-- `status` é opcional na criação → padrão: `"pendente"`
-- Respostas: `200` Sucesso · `201` Criada · `400` Dados inválidos · `404` Não encontrada
-
-## Estrutura do Projeto
-
-```
+Estrutura do Projeto
+plaintext
 Task-manager/
+├── config/
+│   └── db.js
+├── models/
+│   └── Task.js
 ├── controllers/
 │   └── tasksController.js
 ├── routes/
@@ -42,4 +38,3 @@ Task-manager/
 ├── server.js
 ├── package.json
 └── README.md
-
