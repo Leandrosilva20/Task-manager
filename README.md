@@ -4,7 +4,7 @@ Dois projetos entregues:
 
 ---
 
-## 📂 Trabalho 1 — Armazenamento em Memória
+## Trabalho 1 — Armazenamento em Memória
 **Pasta:** `trabalho-01-memoria/`
 
 - Tecnologias: Node.js + Express
@@ -15,7 +15,7 @@ Dois projetos entregues:
 
 ---
 
-## 📂 Trabalho 2 — Persistência com MongoDB
+## Trabalho 2 — Persistência com MongoDB
 **Pasta:** `trabalho-02-mongodb/`
 
 - Tecnologias: Node.js + Express + MongoDB + Mongoose
@@ -27,4 +27,4 @@ Dois projetos entregues:
 ---
 
 ## Autor
-Desenvolvido por **Leandrosilva20**
+Desenvolvido por **Leandro Silva**
