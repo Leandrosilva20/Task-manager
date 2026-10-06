@@ -1,19 +1,17 @@
 const express = require("express");
-const tasksRoutes = require("./routes/tasks");
+const conectar = require("./config/db");
+const rotas = require("./routes/tasks");
 
 const app = express();
-const PORT = 3000;
+const PORTA = 3000;
+
+conectar();
 
 app.use(express.json());
-app.use("/tasks", tasksRoutes);
+app.use("/tasks", rotas);
 
 app.get("/", (req, res) => {
-  res.send("<h1>Sistema de Gerenciamento de Tarefas</h1><p>Acesse /tasks</p>");
+  res.send("<h1>Tarefas com MongoDB</h1><p>Acesse /tasks</p>");
 });
 
-app.use((err, req, res, next) => {
-  console.error(err);
-  res.status(500).json({ erro: "Erro interno no servidor" });
-});
-
-app.listen(PORT, () => console.log("🚀 Servidor rodando na porta 3000"));
+app.listen(PORTA, () => console.log(`🚀 Rodando na porta ${PORTA}`));
