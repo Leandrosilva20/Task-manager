@@ -22,12 +22,14 @@ GET	/tasks	Listar todas	?status=pendente&page=1&limit=5
 POST	/tasks	Criar nova	{"título": "Nome", "descrição": "Detalhe"}
 PUT	/tasks/:id	Atualizar tarefa	Envie os campos que quer alterar
 DELETE	/tasks/:id	Remover tarefa	—
+
 Detalhes:
 título — obrigatório
 status — opcional: pendente (padrão) · em andamento · concluída
 Os dados ficam salvos no banco e não somem ao reiniciar o servidor
+
 Estrutura do Projeto
-plaintext
+
 Task-manager/
 ├── config/
 │   └── db.js
