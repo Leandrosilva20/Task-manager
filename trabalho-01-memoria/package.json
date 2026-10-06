@@ -1,1 +1,12 @@
-
+{
+  "name": "tarefas-memoria",
+  "version": "1.0.0",
+  "description": "Trabalho 1 - Sistema de Tarefas em Memória",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
