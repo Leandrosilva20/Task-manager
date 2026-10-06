@@ -15,8 +15,9 @@ Projeto desenvolvido com **Node.js**, **Express**, **MongoDB** e **Mongoose** �
 npm install
 npm start
 Acesse: http://localhost:3000/tasks
+
 Rotas da API
-Tabela
+
 Método	Rota	Descrição	Como usar
 GET	/tasks	Listar todas	?status=pendente&page=1&limit=5
 POST	/tasks	Criar nova	{"título": "Nome", "descrição": "Detalhe"}
